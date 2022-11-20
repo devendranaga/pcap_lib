@@ -93,7 +93,7 @@ nc_pcap_reader::nc_pcap_reader(std::string filename)
         printf("failed to open %s\n", filename.c_str());
         return;
     }
-    
+
     ret = fread(&glob_hdr, sizeof(glob_hdr), 1, fp);
     if (ret == 1) {
 #ifdef NC_PCAP_DEBUG
